@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+
 const Counter = (props) => {
-  console.log(props);
-  const [value, setValue] = useState(props.value);
+  const { value } = props;
 
   const formatValue = () => {
     return value === 0 ? "empty" : value;
@@ -13,21 +13,37 @@ const Counter = (props) => {
   };
 
   const handleIncrement = () => {
-    setValue((prevState) => prevState + 1);
+    props.onIncrement(props.id);
   };
+
   const handleDecrement = () => {
-    setValue((prevState) => prevState - 1);
+    props.onDecrement(props.id);
   };
 
   return (
-    <div>
+    <div className="d-flex flex-sm-row m-3 align-items-center">
       <span>{props.name}</span>
       <span className={getBageClasses()}>{formatValue()}</span>
-      <button className="btn btn-primary btn-sm m-2" onClick={handleIncrement}>
-        +
-      </button>
-      <button className="btn btn-primary btn-sm m-2" onClick={handleDecrement}>
-        -
+      <div className="d-flex">
+        <button
+          className="btn btn-primary btn-sm m-2"
+          onClick={handleIncrement}
+        >
+          +
+        </button>
+        <button
+          className="btn btn-primary btn-sm m-2"
+          onClick={handleDecrement}
+        >
+          -
+        </button>
+      </div>
+
+      <button
+        className="btn btn-danger btn-sm m-2 "
+        onClick={() => props.onDelete(props.id)}
+      >
+        Delete
       </button>
     </div>
   );
