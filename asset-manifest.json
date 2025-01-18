@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cyborgmachine/react-components-composition/static/css/main.d138fb8e.css",
+    "main.js": "/cyborgmachine/react-components-composition/static/js/main.4c8ccc89.js",
+    "index.html": "/cyborgmachine/react-components-composition/index.html",
+    "main.d138fb8e.css.map": "/cyborgmachine/react-components-composition/static/css/main.d138fb8e.css.map",
+    "main.4c8ccc89.js.map": "/cyborgmachine/react-components-composition/static/js/main.4c8ccc89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d138fb8e.css",
+    "static/js/main.4c8ccc89.js"
+  ]
+}
